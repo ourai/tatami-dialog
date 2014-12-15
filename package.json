@@ -1,0 +1,33 @@
+{
+  "name": "tatami-dialog",
+  "version": "0.0.1",
+  "description": "JavaScript library for project",
+  "homepage": "http://ourai.github.io/tatami/",
+  "keywords": [
+    "javascript",
+    "library",
+    "project",
+    "jQuery",
+    "jquery"
+  ],
+  "author": "Ourai Lin <ourairyu@hotmail.com> (http://ourai.ws/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tatamijs/tatami-dialog.git"
+  },
+  "bugs": "https://github.com/tatamijs/tatami-dialog/issues",
+  "engines": "node >= 0.8.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "~0.10.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jasmine": "~0.6.3"
+  },
+  "scripts": {
+    "build": "npm install && grunt",
+    "test": "grunt jasmine"
+  }
+}

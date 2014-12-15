@@ -1,0 +1,19 @@
+{
+  "name": "tatami-dialog",
+  "version": "0.0.1",
+  "main": ["dest/tatami-dialog.min.js"],
+  "license": "MIT",
+  "ignore": ["**/*", "!dest/**/*"],
+  "dependencies": {
+    "jquery": "https://github.com/jquery/jquery.git#1.8.3",
+    "tatami": "https://github.com/tatamijs/tatami.git"
+  },
+  "keywords": [
+    "coffee",
+    "CoffeeScript",
+    "plugin",
+    "dialog",
+    "jquery",
+    "bootstrap"
+  ]
+}
