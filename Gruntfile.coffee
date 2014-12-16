@@ -30,6 +30,11 @@ module.exports = ( grunt ) ->
               "<%= meta.temp %>/<%= pkg.name %>-jquery.js"
               "build/outro.js"
             ]
+          "dest/<%= pkg.name %>-bootstrap.js": [
+              "build/intro.js"
+              "<%= meta.temp %>/<%= pkg.name %>-bootstrap.js"
+              "build/outro.js"
+            ]
     coffee:
       options:
         bare: true
@@ -38,7 +43,12 @@ module.exports = ( grunt ) ->
         files:
           "<%= meta.temp %>/<%= pkg.name %>-jquery.js": [
               "src/variables.coffee"
-              "src/handlers/jquery-ui-dialog.coffee"
+              "src/handlers/jquery-ui.coffee"
+              "src/dialog.coffee"
+            ]
+          "<%= meta.temp %>/<%= pkg.name %>-bootstrap.js": [
+              "src/variables.coffee"
+              "src/handlers/bootstrap.coffee"
               "src/dialog.coffee"
             ]
       locales:
@@ -61,6 +71,7 @@ module.exports = ( grunt ) ->
       build:
         files:
           "dest/<%= pkg.name %>-jquery.min.js": "dest/<%= pkg.name %>-jquery.js"
+          "dest/<%= pkg.name %>-bootstrap.min.js": "dest/<%= pkg.name %>-bootstrap.js"
     clean:
       compiled:
         src: ["<%= meta.temp %>/**"]
