@@ -79,7 +79,7 @@ systemDialogHandler = ( type, message, okHandler, cancelHandler ) ->
   btns = []
   btnText =
     ok: _i18n "button.ok"
-    cancel: _i18n "button.cancel".
+    cancel: _i18n "button.cancel"
     yes: _i18n "button.yes"
     no: _i18n "button.no"
 
@@ -134,3 +134,8 @@ systemDialogHandler = ( type, message, okHandler, cancelHandler ) ->
   dlg
     .dialog "option", "buttons", btns
     .dialog "open"
+
+  return dlg
+
+destroyDialog = ( dlg ) ->
+  dlg.dialog "destroy"

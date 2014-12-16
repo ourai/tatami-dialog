@@ -54,16 +54,13 @@ __proj.extend
       name: "destroySystemDialogs"
 
       handler: ->
-        dlgs = storage.pool.systemDialog
+        if @isPlainObject _dialogs
+          @each _dialogs, ( dlg ) ->
+            destroyDialog?(dlg)
+            dlg.remove()
 
-        if @isFunction($.fn.dialog) and @isPlainObject(dlgs)
-          @each dlgs, ( dlg ) ->
-            dlg
-              .dialog "destroy"
-              .remove()
+          _dialogs = {}
 
-          dlgs = storage.pool.systemDialog = {}
-
-        return @isEmpty dlgs
+        return @isEmpty _dialogs
     }
   ]
