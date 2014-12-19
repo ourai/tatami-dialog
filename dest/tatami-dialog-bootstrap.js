@@ -45,7 +45,7 @@ systemDialog = function(type, message, okHandler, cancelHandler) {
     type = type.toLowerCase();
     dlg = _dialogs[type];
     if (!dlg) {
-      dlg = $("<div class=\"modal fade YY-systemDialog--" + type + "\" tabindex=\"-1\" data-keyboard=\"false\">\n  <div class=\"modal-dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\"><span>&times;</span><span class=\"sr-only\">" + (_i18n("button.close")) + "</span></button>\n        <h4 class=\"modal-title\">" + (_i18n("title")) + "</h4>\n      </div>\n      <div class=\"modal-body\"></div>\n      <div class=\"modal-footer\"></div>\n    </div>\n  </div>\n</div>");
+      dlg = $("<div class=\"modal fade YY-systemDialog--" + type + "\" tabindex=\"-1\" data-keyboard=\"false\" data-backdrop=\"static\">\n  <div class=\"modal-dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\"><span>&times;</span><span class=\"sr-only\">" + (_i18n("button.close")) + "</span></button>\n        <h4 class=\"modal-title\">" + (_i18n("title")) + "</h4>\n      </div>\n      <div class=\"modal-body\"></div>\n      <div class=\"modal-footer\"></div>\n    </div>\n  </div>\n</div>");
       if (type === "confirm") {
         $(".modal-footer", dlg).append("<button type=\"button\" class=\"btn btn-default YY-button--cancel\" data-dismiss=\"modal\">" + (_i18n("button.cancel")) + "</button>\n<button type=\"button\" class=\"btn btn-primary YY-button--ok\">" + (_i18n("button.ok")) + "</button>");
       } else if (type === "confirmex") {

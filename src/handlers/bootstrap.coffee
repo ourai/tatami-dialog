@@ -18,7 +18,7 @@ systemDialog = ( type, message, okHandler, cancelHandler ) ->
 
     if not dlg
       dlg = $ """
-              <div class="modal fade YY-systemDialog--#{type}" tabindex="-1" data-keyboard="false">
+              <div class="modal fade YY-systemDialog--#{type}" tabindex="-1" data-keyboard="false" data-backdrop="static">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
